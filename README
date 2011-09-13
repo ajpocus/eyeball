@@ -1,0 +1,3 @@
+This is an attempt to implement minimal evidence-based scheduling. Many vital
+parts, such as the task timer and analytics tools have yet to be written. More
+to come.

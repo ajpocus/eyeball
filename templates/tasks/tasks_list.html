@@ -1,0 +1,19 @@
+{% extends "tasks/tasks_base.html" %}
+
+{% block interface %}
+    <div id="task-list">
+	{% if tasks %}
+	    {% for task in tasks %}
+		<a href="/tasks/add/">Add a Task</a>
+		<div class="task">
+		    <span class="estimate">{{ task.estimated_time }}</span>
+		    <span class="description">{{ task.description }}</span>
+		</div>
+	    {% endfor %}
+	{% else %}
+	    <p class="info">You don't have any tasks yet.
+		<a href="/tasks/add/">Add one now.</a>
+	    </p>
+	{% endif %}
+    </div>
+{% endblock %}
